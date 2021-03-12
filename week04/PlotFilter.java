@@ -22,7 +22,7 @@ public class PlotFilter {
         StdDraw.setYscale(y0, y1);
 
         // for bigger points
-        StdDraw.setPenRadius(0.005);
+        StdDraw.setPenRadius(0.001);
 
         // to speed up performance, defer displaying points
         StdDraw.enableDoubleBuffering();
