@@ -9,7 +9,19 @@ public class Triangle {
     }
 
     public static void main(String[] args) {
-        drawTriangle(0, 0, 1, 0.5, 0, 1);
+        double ax = 0;
+        double ay = 0;
+        double bx = 1;
+        double by = 0.5;
+        double cx = 0;
+        double cy = 1;
+
+        for (int i = 0; i < 3; i++)
+        {
+            drawTriangle(ax, ay, bx, by, cx, cy);
+            ax += 0.1;
+            ay += 0.1;
+        }
 
     }    
 }
