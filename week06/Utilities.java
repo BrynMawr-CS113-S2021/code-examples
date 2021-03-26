@@ -25,10 +25,57 @@ public class Utilities {
         return true;
     } 
 
+    public static boolean alldigits(String value) {
+        for (int i = 0; i < value.length(); i++) {
+            char c = value.charAt(i);
+            int intC = c - '0';
+            if (intC < 0 || intC > 9) {
+                return false;
+            }
+        }
+
+        if (value.length() == 0) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static boolean IsInteger2(String value) {
+
+        if (value.length() > 1 && value.charAt(0) == '-') {
+            return alldigits(value.substring(1));
+        }
+        return alldigits(value);
+    } 
+
+    public static boolean IsInteger3(String value) {
+
+        if (value.length() == 0) {
+            return false;
+        }
+
+        int startIndex = 0;
+        if (value.length() > 1 && value.charAt(0) == '-') {
+            startIndex = 1;
+        }
+
+        for (int i = startIndex; i < value.length(); i++) {
+            char c = value.charAt(i);
+            int intC = c - '0';
+            if (intC < 0 || intC > 9) {
+                return false;
+            }
+        }
+
+        return true;
+    } 
+
+
     public static void main(String[] args) {
         String[] testInputs = {"234", "-3", "apple", "", "765.9", "87664 afae", "-"};
         for (int i = 0; i < testInputs.length; i++) {
-            boolean result = IsInteger(testInputs[i]);
+            boolean result = IsInteger3(testInputs[i]);
             System.out.println(testInputs[i]+" is integer? "+result);
         }
     } 
