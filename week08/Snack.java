@@ -21,6 +21,11 @@ public class Snack {
         }
     } 
 
+    //setters/mutators
+    public void setQuantity(int quantity) {
+        mQuantity = quantity;
+    }
+
     // getter/accessor
     public int getQuantity() {
         return mQuantity;
