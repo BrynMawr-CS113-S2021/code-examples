@@ -37,6 +37,7 @@ class BinarySearch {
             System.out.println("We didn't find " + val); 
         }
         
-        System.out.println("Search: 30" + search(30, numbers));
+        index = search(30, numbers);
+        System.out.println("Search 30: " + index);
     }
 }
